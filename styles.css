@@ -1620,3 +1620,50 @@ button, input, textarea { font: inherit; }
   background-size: cover;
   background-position: center center;
 }
+
+/* Final home ABOUT preview: use the supplied image instead of generated text. */
+.home-about {
+  min-height: clamp(560px, 43vw, 790px);
+  padding: clamp(96px, 7vw, 142px) 24px clamp(118px, 8vw, 170px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(58px, 4.5vw, 92px);
+}
+
+.home-about__title {
+  display: block;
+  width: min(1280px, 76vw);
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: 0;
+  background: none;
+  background-image: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  color: inherit;
+}
+
+.home-about__title img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-about__link {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .home-about {
+    min-height: 410px;
+    padding: 72px 18px 102px;
+    gap: 38px;
+  }
+
+  .home-about__title {
+    width: min(680px, 94vw);
+  }
+}
