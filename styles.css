@@ -1624,17 +1624,17 @@ button, input, textarea { font: inherit; }
 /* Final home ABOUT preview: use the supplied image instead of generated text. */
 .home-about {
   min-height: clamp(560px, 43vw, 790px);
-  padding: clamp(96px, 7vw, 142px) 24px clamp(118px, 8vw, 170px);
+  padding: clamp(96px, 7vw, 142px) 24px clamp(112px, 7.5vw, 158px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: clamp(58px, 4.5vw, 92px);
+  gap: clamp(48px, 3.8vw, 76px);
 }
 
 .home-about__title {
   display: block;
-  width: min(1280px, 76vw);
+  width: min(980px, 58vw);
   margin: 0;
   font-size: 0;
   line-height: 0;
@@ -1660,10 +1660,10 @@ button, input, textarea { font: inherit; }
   .home-about {
     min-height: 410px;
     padding: 72px 18px 102px;
-    gap: 38px;
+    gap: 34px;
   }
 
   .home-about__title {
-    width: min(680px, 94vw);
+    width: min(520px, 86vw);
   }
 }
