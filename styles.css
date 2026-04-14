@@ -1668,36 +1668,59 @@ button, input, textarea { font: inherit; }
   }
 }
 
-/* Center the home blog previews as two balanced rows of short, wide cards. */
+/* Homepage blog previews: centered editorial grid, 3 / 2 / 1 columns. */
 .home-post-strip {
-  width: min(1500px, calc(100vw - 240px));
-  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: row;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  justify-items: center;
-  gap: clamp(48px, 4.2vw, 72px) clamp(50px, 4.4vw, 72px);
+  width: min(1500px, calc(100vw - 96px));
+  margin: 0 auto;
+  gap: clamp(42px, 3.6vw, 64px);
+  justify-content: center;
+  justify-items: stretch;
+  align-items: stretch;
+  overflow: visible;
   padding-bottom: 148px;
+  scroll-snap-type: none;
 }
 
-.post-card {
+.home-post-strip .post-card {
   width: 100%;
-  max-width: 540px;
+  max-width: none;
+  scroll-snap-align: none;
 }
 
-.post-card a {
+.home-post-strip .post-card a {
   width: 100%;
-  min-height: 0;
-  aspect-ratio: 2.2 / 1;
+  height: clamp(270px, 18vw, 340px);
+  min-height: 270px;
+  aspect-ratio: auto;
 }
 
-.post-card__title {
+.home-post-strip .post-card a::after {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.62));
+}
+
+.home-post-strip .post-card__image {
+  background-size: cover;
+  background-position: center center;
+}
+
+.home-post-strip .post-card__title {
   max-width: 92%;
-  padding: 0 clamp(28px, 2.2vw, 44px) clamp(24px, 1.9vw, 36px);
+  padding: 0 clamp(26px, 2vw, 38px) clamp(24px, 1.8vw, 34px);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.42);
 }
 
 @media (max-width: 1100px) {
   .home-post-strip {
-    width: min(860px, calc(100vw - 48px));
+    width: min(960px, calc(100vw - 48px));
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px;
+  }
+
+  .home-post-strip .post-card a {
+    height: clamp(285px, 30vw, 340px);
   }
 }
 
@@ -1709,11 +1732,11 @@ button, input, textarea { font: inherit; }
     padding-bottom: 96px;
   }
 
-  .post-card {
-    max-width: 520px;
+  .home-post-strip .post-card {
+    max-width: none;
   }
 
-  .post-card a {
-    aspect-ratio: 1.75 / 1;
+  .home-post-strip .post-card a {
+    height: clamp(300px, 62vw, 380px);
   }
 }
