@@ -1667,3 +1667,53 @@ button, input, textarea { font: inherit; }
     width: min(520px, 86vw);
   }
 }
+
+/* Center the home blog previews as two balanced rows of short, wide cards. */
+.home-post-strip {
+  width: min(1500px, calc(100vw - 240px));
+  margin: 0 auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
+  gap: clamp(48px, 4.2vw, 72px) clamp(50px, 4.4vw, 72px);
+  padding-bottom: 148px;
+}
+
+.post-card {
+  width: 100%;
+  max-width: 540px;
+}
+
+.post-card a {
+  width: 100%;
+  min-height: 0;
+  aspect-ratio: 2.2 / 1;
+}
+
+.post-card__title {
+  max-width: 92%;
+  padding: 0 clamp(28px, 2.2vw, 44px) clamp(24px, 1.9vw, 36px);
+}
+
+@media (max-width: 1100px) {
+  .home-post-strip {
+    width: min(860px, calc(100vw - 48px));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .home-post-strip {
+    width: calc(100vw - 36px);
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 96px;
+  }
+
+  .post-card {
+    max-width: 520px;
+  }
+
+  .post-card a {
+    aspect-ratio: 1.75 / 1;
+  }
+}
