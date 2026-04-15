@@ -2088,25 +2088,39 @@ button, input, textarea { font: inherit; }
 
 /* About page top hero and portrait placement. */
 .about-hero {
-  min-height: clamp(320px, 34vw, 460px);
+  min-height: clamp(420px, 38vw, 620px);
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(92px, 8vw, 142px) 24px clamp(82px, 7vw, 132px);
+  overflow: visible;
 }
 
 .about-hero__image {
-  filter: saturate(0.78) brightness(1.04);
-  opacity: 0.3;
-  background-position: center 46%;
-  transform: scale(1.02);
+  display: none;
 }
 
 .about-hero::after {
-  background: rgba(255, 255, 255, 0.54);
+  content: none;
 }
 
-.about-hero h1 {
-  color: rgba(125, 121, 124, 0.82);
-  font-size: clamp(72px, 11vw, 132px);
-  letter-spacing: 0.025em;
+.about-hero__title {
+  display: block;
+  width: min(980px, 58vw);
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: 0;
+  background: none;
+  background-image: none;
+  color: inherit;
+}
+
+.about-hero__title img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .about-portrait {
@@ -2131,11 +2145,12 @@ button, input, textarea { font: inherit; }
 
 @media (max-width: 700px) {
   .about-hero {
-    min-height: 280px;
+    min-height: 330px;
+    padding: 72px 18px 66px;
   }
 
-  .about-hero h1 {
-    font-size: clamp(58px, 18vw, 96px);
+  .about-hero__title {
+    width: min(520px, 86vw);
   }
 
   .about-portrait {
