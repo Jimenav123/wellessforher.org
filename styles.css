@@ -1621,6 +1621,31 @@ button, input, textarea { font: inherit; }
   background-position: center center;
 }
 
+/* Featured image replacements for existing blog posts. */
+.post-card__image--food,
+.blog-list-card__image--food,
+.single-post__image--food {
+  background-image: url("assets/blog-balancing-hormones.avif");
+  background-size: cover;
+  background-position: center center;
+}
+
+.post-card__image--coffee,
+.blog-list-card__image--coffee,
+.single-post__image--coffee {
+  background-image: url("assets/blog-matcha-coffee.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.post-card__image--morning,
+.blog-list-card__image--morning,
+.single-post__image--morning {
+  background-image: url("assets/blog-morning-routine.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
 /* Final home ABOUT preview: use the supplied image instead of generated text. */
 .home-about {
   min-height: clamp(560px, 43vw, 790px);
