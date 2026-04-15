@@ -443,6 +443,35 @@ button, input, textarea { font: inherit; }
 .work-form button { justify-self: center; min-width: 180px; border: 1px solid var(--black); background: var(--black); color: var(--white); padding: 14px 32px; cursor: pointer; }
 .work-form .form-message { color: var(--black); text-align: center; }
 
+.work-page { background: var(--white); }
+.work-hero { width: min(930px, calc(100vw - 48px)); margin: 0 auto; padding: 104px 0 66px; text-align: center; }
+.work-hero__eyebrow { margin: 0 0 18px; font-family: var(--libre); font-size: 14px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+.work-hero h1 { margin: 0; font-family: var(--playfair); font-size: clamp(54px, 8vw, 116px); font-weight: 400; line-height: 0.95; color: var(--black); }
+.work-hero p:last-child { max-width: 680px; margin: 28px auto 0; font-family: var(--libre); font-size: clamp(17px, 1.4vw, 21px); line-height: 1.8; color: var(--muted); }
+.work-section-label { margin: 0 0 16px; font-family: var(--libre); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.work-intro, .work-credentials { width: min(900px, calc(100vw - 48px)); margin: 0 auto; padding: 56px 0; border-top: 1px solid var(--line); }
+.work-intro h2, .work-credentials h2, .work-cta h2 { margin: 0; font-family: var(--playfair); font-size: clamp(34px, 4.8vw, 62px); font-weight: 400; line-height: 1.05; color: var(--black); }
+.work-intro > p:last-child { max-width: 720px; margin: 26px 0 0; font-family: var(--libre); font-size: 17px; line-height: 1.9; color: var(--muted); }
+.work-credentials ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 34px 0 0; padding: 0; list-style: none; }
+.work-credentials li { border: 1px solid var(--line); padding: 22px; font-family: var(--libre); font-size: 15px; line-height: 1.7; color: var(--muted); }
+.work-services { width: min(1120px, calc(100vw - 48px)); margin: 34px auto 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.work-card { border: 1px solid var(--line); padding: 34px 30px 38px; background: rgba(255, 255, 255, 0.82); }
+.work-card span { display: block; margin-bottom: 42px; font-family: var(--libre); color: var(--muted); }
+.work-card h2 { margin: 0 0 18px; font-family: var(--playfair); font-size: clamp(26px, 2.4vw, 38px); font-weight: 400; line-height: 1.08; }
+.work-card p { margin: 0; font-family: var(--libre); color: var(--muted); line-height: 1.75; }
+.work-card__meta { margin-top: 22px !important; padding-top: 20px; border-top: 1px solid var(--line); font-size: 14px; }
+.work-card__meta strong { color: var(--black); font-weight: 400; }
+.work-process { width: min(960px, calc(100vw - 48px)); margin: 78px auto 0; padding: 58px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center; }
+.work-process h2 { margin: 0 0 34px; font-family: var(--playfair); font-size: clamp(34px, 5vw, 62px); font-weight: 400; }
+.work-process__steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; text-align: left; }
+.work-process__steps p { margin: 0; font-family: var(--libre); color: var(--muted); line-height: 1.75; }
+.work-process__steps strong { display: block; margin-bottom: 8px; color: var(--black); font-weight: 400; }
+.work-cta { width: min(900px, calc(100vw - 48px)); margin: 0 auto; padding: 78px 0 0; text-align: center; }
+.work-cta h2 { max-width: 760px; margin: 0 auto; }
+.work-cta__button { display: inline-flex; align-items: center; justify-content: center; margin-top: 30px; min-width: 220px; min-height: 52px; border: 1px solid var(--black); background: var(--black); color: var(--white); font-family: var(--libre); font-size: 15px; text-decoration: none; transition: background 180ms ease, color 180ms ease; }
+.work-cta__button:hover { background: var(--white); color: var(--black); }
+.work-contact { width: min(960px, calc(100vw - 48px)); margin: 0 auto; padding: 76px 0 104px; }
+
 .blog-hero { padding: 64px 24px 30px; text-align: center; }
 .blog-hero h1 { margin: 0 0 12px; font-family: var(--playfair); font-style: italic; font-size: clamp(36px, 6vw, 76px); font-weight: 600; line-height: 1.05; }
 .blog-hero p { font-family: var(--libre); font-size: 18px; }
@@ -2229,5 +2258,52 @@ button, input, textarea { font: inherit; }
 
   .blog-list {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Standalone Work With Me page responsive structure. */
+@media (max-width: 1100px) {
+  .work-services,
+  .work-credentials ul,
+  .work-process__steps {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card span {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 700px) {
+  .work-hero {
+    width: calc(100vw - 36px);
+    padding: 72px 0 44px;
+  }
+
+  .work-intro,
+  .work-credentials,
+  .work-cta,
+  .work-services,
+  .work-process,
+  .work-contact {
+    width: calc(100vw - 36px);
+  }
+
+  .work-intro,
+  .work-credentials {
+    padding: 42px 0;
+  }
+
+  .work-card {
+    padding: 28px 24px 32px;
+  }
+
+  .work-process {
+    margin-top: 54px;
+    padding: 44px 0;
+  }
+
+  .work-contact {
+    padding: 58px 0 82px;
   }
 }
