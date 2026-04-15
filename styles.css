@@ -2008,3 +2008,50 @@ button, input, textarea { font: inherit; }
     white-space: normal;
   }
 }
+
+/* About page editorial body text section. */
+.about-story {
+  background: var(--white);
+  color: #686465;
+  padding: clamp(72px, 8vw, 118px) max(24px, 7vw);
+}
+
+.about-story__panel {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-story h2 {
+  color: var(--black);
+  font-family: var(--playfair);
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 400;
+  line-height: 1.18;
+  margin: 0 0 34px;
+  text-align: left;
+}
+
+.about-story p {
+  color: #686465;
+  font-family: var(--libre);
+  font-size: clamp(15px, 1.15vw, 17px);
+  font-weight: 400;
+  line-height: 2.05;
+  margin: 0 0 28px;
+  text-align: left;
+}
+
+.about-story p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .about-story {
+    padding: 58px 22px;
+  }
+
+  .about-story p {
+    line-height: 1.9;
+    margin-bottom: 24px;
+  }
+}
