@@ -65,6 +65,7 @@ const headingLines = new Set([
   'Herbal Remedies and Supplements',
   'Adaptogenic Herbs',
   'Omega 3 Fatty Acids',
+  'Omega-3 Fatty Acids',
   'Vitamin D and Magnesium',
   'The Importance of Hydration',
   'Monitoring and Tracking',
