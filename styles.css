@@ -2060,3 +2060,64 @@ button, input, textarea { font: inherit; }
     margin-bottom: 26px;
   }
 }
+
+/* About page top hero and portrait placement. */
+.about-hero {
+  min-height: clamp(320px, 34vw, 460px);
+  background: #fff;
+}
+
+.about-hero__image {
+  filter: saturate(0.78) brightness(1.04);
+  opacity: 0.3;
+  background-position: center 46%;
+  transform: scale(1.02);
+}
+
+.about-hero::after {
+  background: rgba(255, 255, 255, 0.54);
+}
+
+.about-hero h1 {
+  color: rgba(125, 121, 124, 0.82);
+  font-size: clamp(72px, 11vw, 132px);
+  letter-spacing: 0.025em;
+}
+
+.about-portrait {
+  background: #fff;
+  padding: clamp(46px, 6vw, 76px) 24px 0;
+}
+
+.about-portrait__frame {
+  width: min(390px, 76vw);
+  margin: 0 auto;
+}
+
+.about-portrait__frame img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5.6;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 2px;
+  box-shadow: 0 22px 58px rgba(30, 28, 27, 0.13);
+}
+
+@media (max-width: 700px) {
+  .about-hero {
+    min-height: 280px;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(58px, 18vw, 96px);
+  }
+
+  .about-portrait {
+    padding-top: 42px;
+  }
+
+  .about-portrait__frame {
+    width: min(330px, 82vw);
+  }
+}
