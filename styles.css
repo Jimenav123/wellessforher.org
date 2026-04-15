@@ -1746,8 +1746,8 @@ button, input, textarea { font: inherit; }
 
 .home-post-strip .post-card a {
   width: 100%;
-  height: clamp(270px, 18vw, 340px);
-  min-height: 270px;
+  height: clamp(310px, 21vw, 390px);
+  min-height: 310px;
   aspect-ratio: auto;
 }
 
@@ -1762,7 +1762,9 @@ button, input, textarea { font: inherit; }
 
 .home-post-strip .post-card__title {
   max-width: 92%;
-  padding: 0 clamp(26px, 2vw, 38px) clamp(24px, 1.8vw, 34px);
+  padding: 0 clamp(28px, 2.2vw, 44px) clamp(30px, 2.3vw, 42px);
+  font-size: clamp(20px, 1.45vw, 28px);
+  line-height: 1.16;
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.42);
 }
 
@@ -1774,7 +1776,7 @@ button, input, textarea { font: inherit; }
   }
 
   .home-post-strip .post-card a {
-    height: clamp(285px, 30vw, 340px);
+    height: clamp(310px, 34vw, 380px);
   }
 }
 
@@ -1791,8 +1793,38 @@ button, input, textarea { font: inherit; }
   }
 
   .home-post-strip .post-card a {
-    height: clamp(300px, 62vw, 380px);
+    height: clamp(320px, 72vw, 420px);
   }
+}
+
+/* Data-rendered blog content and polished preview card sizing. */
+.single-post__content h2 {
+  font-family: var(--playfair);
+  font-size: clamp(30px, 3.8vw, 46px);
+  font-weight: 400;
+  line-height: 1.16;
+  margin: 50px 0 18px;
+}
+
+.single-post__content h3 {
+  font-family: var(--playfair);
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 34px 0 12px;
+}
+
+.single-post__content .citation-text {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.single-post__content ul {
+  margin-bottom: 28px;
+}
+
+.blog-list-card__body {
+  gap: 8px;
 }
 
 /* Compact soft-image footer/contact section. */
