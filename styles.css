@@ -2319,7 +2319,7 @@ button, input, textarea { font: inherit; }
 .about-page .about-hero {
   width: 100%;
   min-height: auto;
-  padding: 46px 24px 26px;
+  padding: 50px 24px 38px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2334,7 +2334,7 @@ button, input, textarea { font: inherit; }
 
 .about-page .about-hero__title img {
   width: auto;
-  height: clamp(48px, 5vw, 64px);
+  height: clamp(56px, 5.8vw, 72px);
   max-width: calc(100vw - 48px);
 }
 
@@ -2416,11 +2416,11 @@ button, input, textarea { font: inherit; }
 
 @media (max-width: 700px) {
   .about-page .about-hero {
-    padding: 34px 18px 22px;
+    padding: 38px 18px 30px;
   }
 
   .about-page .about-hero__title img {
-    height: clamp(40px, 13vw, 54px);
+    height: clamp(46px, 14vw, 60px);
   }
 
   .about-page .about-portrait {
