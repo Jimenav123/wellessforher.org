@@ -1947,6 +1947,22 @@ button, input, textarea { font: inherit; }
   min-width: 0;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.social-links a {
+  display: inline-flex;
+  color: inherit;
+}
+
+.social-links svg {
+  margin: 0;
+}
+
 .social p {
   margin: 0 0 8px;
 }
