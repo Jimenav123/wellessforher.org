@@ -1908,8 +1908,8 @@ button, input, textarea { font: inherit; }
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
-  width: 100vw;
-  margin: 0 calc(50% - 50vw);
+  width: 100%;
+  margin: 0;
   padding: 0;
   overflow: hidden;
   background: none;
@@ -1946,6 +1946,22 @@ button, input, textarea { font: inherit; }
 .hero-tile + .hero-tile {
   margin-left: 0;
   width: 100%;
+}
+
+.hero-tile--book {
+  background-image: url("assets/hero-book-clean.avif");
+}
+
+.hero-tile--robe {
+  background-image: url("assets/hero-robe-clean.avif");
+}
+
+.hero-tile--matcha {
+  background-image: url("assets/hero-matcha-clean.avif");
+}
+
+.hero-tile--pilates {
+  background-image: url("assets/hero-pilates-clean.avif");
 }
 
 .hero-collage h1 {
