@@ -2319,7 +2319,7 @@ button, input, textarea { font: inherit; }
 .about-page .about-hero {
   width: 100%;
   min-height: auto;
-  padding: 50px 24px 38px;
+  padding: 58px 24px 42px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2329,57 +2329,79 @@ button, input, textarea { font: inherit; }
 .about-page .about-hero__title {
   width: auto;
   margin: 0;
-  line-height: 0.9;
-}
-
-.about-page .about-hero__title img {
-  width: auto;
-  height: clamp(56px, 5.8vw, 72px);
-  max-width: calc(100vw - 48px);
+  font-family: var(--playfair);
+  font-size: clamp(56px, 5.4vw, 72px);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: 0.08em;
+  color: var(--black);
 }
 
 .about-page .about-portrait {
   width: 100%;
-  padding: 0 24px 34px;
+  padding: 0 24px 44px;
   display: flex;
   justify-content: center;
 }
 
 .about-page .about-portrait__frame {
-  width: min(300px, 54vw);
+  width: min(320px, 54vw);
   margin: 0 auto;
+  transform: rotate(-0.35deg);
 }
 
 .about-page .about-story {
   width: 100%;
-  padding: 26px 24px 48px;
+  padding: 16px 24px 58px;
 }
 
 .about-page .about-story__panel {
-  max-width: 680px;
+  max-width: 660px;
   margin: 0 auto;
   padding: 0;
 }
 
-.about-page .about-story h2 {
-  margin: 0 0 22px;
-  font-size: clamp(26px, 3vw, 36px);
-  line-height: 1.16;
+.about-page .about-portrait__frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 3px;
+  box-shadow: 0 24px 64px rgba(26, 23, 22, 0.12);
+}
+
+.about-page .about-portrait__frame figcaption {
+  margin-top: 14px;
+  font-family: var(--libre);
+  font-size: 12px;
+  letter-spacing: 0.08em;
   text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .about-page .about-story p {
-  margin: 0 0 22px;
+  margin: 0 0 24px;
   font-size: clamp(14px, 1vw, 16px);
-  line-height: 1.95;
+  line-height: 2;
+}
+
+.about-page .about-story__hook {
+  margin-bottom: 28px;
+  font-family: var(--playfair);
+  font-size: clamp(25px, 2.8vw, 36px);
+  line-height: 1.2;
+  color: var(--black);
 }
 
 .about-page .about-work-compact {
-  width: min(620px, calc(100vw - 48px));
+  width: min(560px, calc(100vw - 48px));
   height: auto;
   min-height: 0;
-  margin: 0 auto 72px;
-  padding: 34px 0 0;
+  margin: 0 auto 76px;
+  padding: 44px 0 0;
   border-top: 1px solid var(--line);
   text-align: center;
 }
@@ -2393,7 +2415,7 @@ button, input, textarea { font: inherit; }
 }
 
 .about-page .about-work-form {
-  max-width: 560px;
+  max-width: 500px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -2416,23 +2438,19 @@ button, input, textarea { font: inherit; }
 
 @media (max-width: 700px) {
   .about-page .about-hero {
-    padding: 38px 18px 30px;
-  }
-
-  .about-page .about-hero__title img {
-    height: clamp(46px, 14vw, 60px);
+    padding: 42px 18px 32px;
   }
 
   .about-page .about-portrait {
-    padding: 0 18px 30px;
+    padding: 0 18px 38px;
   }
 
   .about-page .about-portrait__frame {
-    width: min(270px, 72vw);
+    width: min(285px, 74vw);
   }
 
   .about-page .about-story {
-    padding: 22px 18px 42px;
+    padding: 14px 18px 48px;
   }
 
   .about-page .about-story__panel {
