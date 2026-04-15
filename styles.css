@@ -1893,3 +1893,74 @@ button, input, textarea { font: inherit; }
     font-size: 13px;
   }
 }
+
+/* Homepage hero collage: centered title overlay without clipping. */
+.hero-collage {
+  position: relative;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  overflow: hidden;
+}
+
+.hero-collage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 82%, rgba(255, 255, 255, 0.08)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.08));
+}
+
+.hero-tile {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero-tile + .hero-tile {
+  margin-left: -1px;
+  width: calc(100% + 1px);
+}
+
+.hero-collage h1 {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 max(24px, 5vw) 0.16em;
+  box-sizing: border-box;
+  overflow: visible;
+  font-family: var(--playfair);
+  font-size: clamp(42px, 5.15vw, 82px);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--black);
+  transform: none;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .hero-collage h1 {
+    font-size: clamp(34px, 6vw, 54px);
+    padding-inline: 22px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-collage h1 {
+    font-size: clamp(30px, 9vw, 48px);
+    line-height: 1.16;
+    white-space: normal;
+  }
+}
