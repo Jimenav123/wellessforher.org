@@ -1641,7 +1641,7 @@ button, input, textarea { font: inherit; }
 .post-card__image--morning,
 .blog-list-card__image--morning,
 .single-post__image--morning {
-  background-image: url("assets/blog-morning-routine.jpg");
+  background-image: url("assets/bread.jpg");
   background-size: cover;
   background-position: center center;
 }
